@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
@@ -54,4 +55,92 @@
 
   
   </body>
+=======
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="store.min.js"></script>
+<script>
+    init()
+    function init() {
+        if (!store.enabled) {
+            alert('Local storage is not supported by your browser. Please disable "Private Mode", or upgrade to a modern browser.')
+            return
+        }
+        store.set('JSON', 'JSON = JavaScript Object Notation');
+        store.set('AJAX', 'AJAX = Asynchronous JavaScipt and XML');
+        store.set('XML', 'XML = eXtensive Markup Language');
+        store.set('API', 'API = Application Program Interface');
+        store.set('MEAN', 'MEAN = MongoDB, Express, Angularjs, Nodejs');
+        store.set('EARN', 'EARN = Express, Angularjs, Redis, Nodejs');
+        store.set('VCS', 'VCS = Version Control System');
+        store.set('TDD', 'TDD = Test Driven Development');
+        store.set('BDD', 'BDD = Behaviour Driven Development');
+        store.set('XHR', 'XHR = XMLHttpRequest');
+        // document.write('username: ' + store.get('username') + '<br />')
+        store.forEach(function(key, val) {
+            console.log(key, '==', val)})
+    }
+</script>
+</head>
+<body>
+<header id="header" class="">
+ <!--  <nav class="navbar navbar-inverse"> -->
+<ul class="nav nav-pills">
+  <li role="presentation" ><a href="index.html"><Strong>Home</Strong></a></li>
+ 
+</ul>
+</header>
+
+<div class="container">
+<div class="jumbotron">
+  <h1>Javascript Dictionary</h1>
+  <p>A simple Javascipt dictionary using LocalStorage and Storejs library.</p>
+  <p><a class="btn btn-primary btn-lg" onclick="listAllItems()" role="button">View all Items in Dictionary</a></p>
+</div>
+</div>
+
+<div class="container">
+  
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="input-group">
+          <input type="text" id="inp" class="form-control" placeholder="Enter the word here...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" onclick="test()" type="button">Go!</button>
+          </span>
+        </div><!-- /input-group -->
+     <textarea id="myTextarea" name="something">Meaning ...</textarea>
+
+      </div><!-- /.col-lg-6 -->
+   
+      <div class="row">
+        <div class="col-lg-5">
+<h1>Items in dictionary</h1>
+<ul>
+  <li>AJAX</li>
+  <li>API</li>
+  <li>BDD</li>
+    <li>EARN</li>
+  <li>JSON</li>
+  <li>MEAN</li>
+    <li>TDD</li>
+  <li>VCS</li>
+  <li>XHR</li>
+    <li>XML</li>
+  
+</ul>
+        </div>
+        </div>
+ </div><!-- /.row -->
+</div>
+</body>
+>>>>>>> refs/remotes/origin/master
 </html>
