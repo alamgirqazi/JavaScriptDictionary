@@ -1,59 +1,55 @@
 
-function listAllItems(){  
-    for (i=0; i<=localStorage.length-1; i++)  
-    {  
-        key = localStorage.key(i);  
-       array[i]= (localStorage.getItem(key));
-
-         alert(localStorage.getItem(key));
-    }  
-}
-var array= [];
 function test()
 {
-var abc = document.getElementById("inp").value;
 
-if (abc == "ajax" || abc == "Ajax" || abc == "AJAX")     
+
+var input = document.getElementById("inp").value;
+var lowerinput= input.toLowerCase();
+if (lowerinput == "ajax")
  {
 document.getElementById("myTextarea").innerHTML = localStorage.getItem("AJAX");
 }
 
-else if (abc == "json" || abc == "Json" || abc == "JSON")
+else if (lowerinput == "json")
 {
 document.getElementById("myTextarea").innerHTML = localStorage.getItem("JSON");
 }
 
-else if (abc == "API" || abc =="Api" || abc =="api")
+else if (lowerinput =="api")
 {
 document.getElementById("myTextarea").innerHTML = localStorage.getItem("API");
-}else if (abc == "BDD" || abc == "Bdd" || abc =="bdd")
+}else if (lowerinput =="bdd")
 {
 document.getElementById("myTextarea").innerHTML = localStorage.getItem("BDD");
 }
+else if (lowerinput == "earn")
+{
+document.getElementById("myTextarea").innerHTML = localStorage.getItem("EARN");
+}
 
-else if (abc == "MEAN" || abc =="Mean" || abc =="mean")
+else if (lowerinput =="mean")
 {
 document.getElementById("myTextarea").innerHTML = localStorage.getItem("MEAN");
 }
 
-else if (abc == "TDD" || abc =="Tdd" || abc =="tdd")
+else if (lowerinput =="tdd")
 {
 document.getElementById("myTextarea").innerHTML = localStorage.getItem("TDD");
 }
 
-else if (abc == "VCS" || abc =="Vcs" || abc =="vcs")
+else if (lowerinput =="vcs")
 {
 document.getElementById("myTextarea").innerHTML = localStorage.getItem("VCS");
 
-}else if (abc == "XHR" || abc =="Xhr" || abc =="xhr")
+}else if (lowerinput =="xhr")
 {
 document.getElementById("myTextarea").innerHTML = localStorage.getItem("XHR");
 
-}else if (abc == "XML" || abc =="XML" || abc =="xml")
+}else if (lowerinput =="xml")
 {
 document.getElementById("myTextarea").innerHTML = localStorage.getItem("XML");
 }
-else if (abc == "")
+else if (lowerinput == "")
 {
 document.getElementById("myTextarea").innerHTML = "Please enter a word first! ";}
 else

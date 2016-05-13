@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-<script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
 <script src="store.min.js"></script>
 <script>
     init()
-    function init() {
+    function init() { // Using Store.js library to set Key-Value Pairs
         if (!store.enabled) {
             alert('Local storage is not supported by your browser. Please disable "Private Mode", or upgrade to a modern browser.')
             return
@@ -27,9 +26,6 @@
         store.set('TDD', 'TDD = Test Driven Development');
         store.set('BDD', 'BDD = Behaviour Driven Development');
         store.set('XHR', 'XHR = XMLHttpRequest');
-        // document.write('username: ' + store.get('username') + '<br />')
-        store.forEach(function(key, val) {
-            console.log(key, '==', val)})
     }
 </script>
 </head>
@@ -38,7 +34,7 @@
  <!--  <nav class="navbar navbar-inverse"> -->
 <ul class="nav nav-pills">
   <li role="presentation" ><a href="index.html"><Strong>Home</Strong></a></li>
- 
+
 </ul>
 </header>
 
@@ -51,7 +47,7 @@
 </div>
 
 <div class="container">
-  
+
     <div class="row">
       <div class="col-lg-7">
         <div class="input-group">
@@ -63,7 +59,7 @@
      <textarea id="myTextarea" name="something">Meaning ...</textarea>
 
       </div><!-- /.col-lg-6 -->
-   
+
       <div class="row">
         <div class="col-lg-5">
 <h1>Items in dictionary</h1>
@@ -78,11 +74,14 @@
   <li>VCS</li>
   <li>XHR</li>
     <li>XML</li>
-  
+
 </ul>
         </div>
         </div>
  </div><!-- /.row -->
 </div>
+
+<script type="text/javascript" src="script.js"></script>
+
 </body>
 </html>
